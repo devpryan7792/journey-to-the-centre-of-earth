@@ -3,7 +3,6 @@ import { ScrollProvider } from './context/ScrollContext';
 import { MainCanvas } from './components/scene/MainCanvas';
 import { HUD } from './components/ui/HUD';
 import { useSoundscape } from './hooks/useSoundscape';
-import { useNarration } from './hooks/useNarration';
 import { VelvetFade } from './components/ui/VelvetFade';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { CheckpointOverlay } from './components/checkpoints/CheckpointOverlay';
@@ -16,7 +15,6 @@ function SoundscapeRunner() {
 }
 
 function AppContent() {
-  useNarration();
   return (
     <>
       <SoundscapeRunner />

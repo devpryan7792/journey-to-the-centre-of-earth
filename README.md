@@ -39,7 +39,12 @@ This application is a 3D web experience built with React, Three.js (React Three 
    npm install
    ```
 
-2. Start the development server:
+2. Generate/Download placeholder images for the environments (if not already present):
+   ```bash
+   node download.cjs
+   ```
+
+3. Start the development server:
    ```bash
    npm run dev
    ```
