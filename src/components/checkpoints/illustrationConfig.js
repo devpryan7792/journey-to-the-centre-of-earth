@@ -2,7 +2,7 @@
 export const ILLUSTRATION_CONFIG = {
   0: {
     // Checkpoint 1: Library
-    image: '/images/checkpoint0.webp',
+    image: '/illustrations/checkpoint_0_library.jpg',
     // PLACEHOLDERS FOR DUAL-LAYER PARALLAX:
     // Once images are generated, add them below:
     // backgroundImage: '/images/checkpoint0_bg.jpg',
@@ -13,7 +13,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   1: {
     // Checkpoint 2: Study/Runic Call
-    image: '/images/checkpoint1.jpg',
+    image: '/illustrations/checkpoint_1_study.jpg',
     // backgroundImage: '/images/checkpoint1_bg.jpg',
     // foregroundImage: '/images/checkpoint1_fg.png',
     bgColor: '#140a05',           // darker espresso
@@ -22,7 +22,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   2: {
     // Checkpoint 3: Iceland Threshold
-    image: '/images/checkpoint2.jpg',
+    image: '/illustrations/checkpoint_2_iceland.jpg',
     // backgroundImage: '/images/checkpoint2_bg.jpg',
     // foregroundImage: '/images/checkpoint2_fg.png',
     bgColor: '#0a0f12',           // cold near-black
@@ -31,7 +31,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   3: {
     // Checkpoint 4: Whispering Gallery (Tunnels)
-    image: '/images/checkpoint3.jpg',
+    image: '/illustrations/checkpoint_3_tunnels.jpg',
     // backgroundImage: '/images/checkpoint3_bg.jpg',
     // foregroundImage: '/images/checkpoint3_fg.png',
     bgColor: '#050806',           // near black with green undertone
@@ -40,7 +40,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   4: {
     // Checkpoint 5: Sea of Mushrooms
-    image: '/images/checkpoint4.webp',
+    image: '/illustrations/checkpoint_4_sea.jpg',
     // backgroundImage: '/images/checkpoint4_bg.jpg',
     // foregroundImage: '/images/checkpoint4_fg.png',
     bgColor: '#05111e',           // deep ocean midnight
@@ -49,7 +49,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   5: {
     // Checkpoint 6: Lidenbrock Sea
-    image: '/images/checkpoint5.jpg',
+    image: '/illustrations/checkpoint_5_prehistoric.jpg',
     // backgroundImage: '/images/checkpoint5_bg.jpg',
     // foregroundImage: '/images/checkpoint5_fg.png',
     bgColor: '#040c12',           // storm abyss
@@ -58,7 +58,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   6: {
     // Checkpoint 7: Leviathan Duel
-    image: '/images/checkpoint6.webp',
+    image: '/illustrations/checkpoint_6_explosion.jpg',
     // backgroundImage: '/images/checkpoint6_bg.jpg',
     // foregroundImage: '/images/checkpoint6_fg.png',
     bgColor: '#180805',           // volcanic dark red
@@ -67,7 +67,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   7: {
     // Checkpoint 8: Ascent of Stromboli
-    image: '/images/checkpoint7.jpg',
+    image: '/illustrations/checkpoint_7_stromboli.jpg',
     // backgroundImage: '/images/checkpoint7_bg.jpg',
     // foregroundImage: '/images/checkpoint7_fg.png',
     bgColor: '#1a3a5a',           // mediterranean night

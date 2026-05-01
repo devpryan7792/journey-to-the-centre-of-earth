@@ -18,20 +18,49 @@ const files = [
   'checkpoint_7_stromboli.jpg'
 ];
 
-files.forEach(file => {
-  const keyword = file.split('_')[2].split('.')[0];
-  const url = `https://picsum.photos/seed/${keyword}/1920/1080?blur=2`;
-  const dest = path.join(dir, file);
-  
-  https.get(url, (res) => {
-    if (res.statusCode === 302) {
-      https.get(res.headers.location, (res2) => {
-        const fileStream = fs.createWriteStream(dest);
-        res2.pipe(fileStream);
-      });
-    } else {
+function downloadFile(url, dest) {
+  return new Promise((resolve, reject) => {
+    https.get(url, (res) => {
+      if (res.statusCode === 302 || res.statusCode === 301) {
+        return downloadFile(res.headers.location, dest).then(resolve).catch(reject);
+      }
+      if (res.statusCode !== 200) {
+        return reject(new Error(`Failed to get '${url}' (${res.statusCode})`));
+      }
       const fileStream = fs.createWriteStream(dest);
       res.pipe(fileStream);
+      fileStream.on('finish', () => {
+        fileStream.close(resolve);
+      });
+      fileStream.on('error', (err) => {
+        fs.unlink(dest, () => reject(err));
+      });
+    }).on('error', reject);
+  });
+}
+
+async function main() {
+  console.log('Downloading placeholder illustrations...');
+  const promises = files.map(file => {
+    const keyword = file.split('_')[2].split('.')[0];
+    const url = `https://picsum.photos/seed/${keyword}/1920/1080?blur=2`;
+    const dest = path.join(dir, file);
+    if (!fs.existsSync(dest)) {
+      console.log(`Downloading ${file}...`);
+      return downloadFile(url, dest);
+    } else {
+      console.log(`File ${file} already exists, skipping.`);
+      return Promise.resolve();
     }
   });
-});
+
+  try {
+    await Promise.all(promises);
+    console.log('All illustrations downloaded successfully.');
+  } catch (err) {
+    console.error('Error downloading files:', err);
+    process.exit(1);
+  }
+}
+
+main();

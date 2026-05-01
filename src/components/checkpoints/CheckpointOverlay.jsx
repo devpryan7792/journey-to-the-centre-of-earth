@@ -222,6 +222,7 @@ export function CheckpointOverlay() {
                   ref={illustrationRef}
                   src={config.backgroundImage}
                   alt={currentCheckpoint.card?.title || 'Background'}
+                  loading="lazy"
                   crossOrigin="anonymous"
                   referrerPolicy="no-referrer"
                   className="checkpoint-illustration"
@@ -238,6 +239,7 @@ export function CheckpointOverlay() {
                 <img
                   src={config.foregroundImage}
                   alt={currentCheckpoint.card?.title || 'Foreground'}
+                  loading="lazy"
                   crossOrigin="anonymous"
                   referrerPolicy="no-referrer"
                   className="checkpoint-illustration"
@@ -259,6 +261,7 @@ export function CheckpointOverlay() {
                 ref={illustrationRef}
                 src={config.image}
                 alt={currentCheckpoint.card?.title || ''}
+                loading="lazy"
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
                 className="checkpoint-illustration"
