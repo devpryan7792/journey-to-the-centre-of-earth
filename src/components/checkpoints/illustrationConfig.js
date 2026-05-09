@@ -2,7 +2,7 @@
 export const ILLUSTRATION_CONFIG = {
   0: {
     // Checkpoint 1: Library
-    image: '/illustrations/checkpoint_0_library.jpg',
+    image: '/illustrations/checkpoint_0_library.webp',
     // PLACEHOLDERS FOR DUAL-LAYER PARALLAX:
     // Once images are generated, add them below:
     // backgroundImage: '/images/checkpoint0_bg.jpg',
@@ -40,7 +40,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   4: {
     // Checkpoint 5: Sea of Mushrooms
-    image: '/illustrations/checkpoint_4_sea.jpg',
+    image: '/illustrations/checkpoint_4_sea.webp',
     // backgroundImage: '/images/checkpoint4_bg.jpg',
     // foregroundImage: '/images/checkpoint4_fg.png',
     bgColor: '#05111e',           // deep ocean midnight
@@ -58,7 +58,7 @@ export const ILLUSTRATION_CONFIG = {
   },
   6: {
     // Checkpoint 7: Leviathan Duel
-    image: '/illustrations/checkpoint_6_explosion.jpg',
+    image: '/illustrations/checkpoint_6_explosion.webp',
     // backgroundImage: '/images/checkpoint6_bg.jpg',
     // foregroundImage: '/images/checkpoint6_fg.png',
     bgColor: '#180805',           // volcanic dark red
